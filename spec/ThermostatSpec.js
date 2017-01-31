@@ -17,4 +17,11 @@ describe('increase thermostat temperature', function(){
     thermostat.increaseTemp();
     expect(thermostat._defaulttemp).toEqual(21)
     })
+  })
+
+  describe('decrease thermostat temperature', function(){
+    it('should decrease temp', function(){
+      thermostat.decreaseTemp();
+      expect(thermostat._defaulttemp).toEqual(19)
+      })
     })
