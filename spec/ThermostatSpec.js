@@ -1,3 +1,5 @@
+'use strict'
+
 var thermostat;
 
 beforeEach(function(){
@@ -9,3 +11,10 @@ describe('thermostat temperature', function(){
     expect(thermostat._defaulttemp).toEqual(20)
   })
 })
+
+describe('increase thermostat temperature', function(){
+  it('should increase temp', function(){
+    thermostat.increaseTemp();
+    expect(thermostat._defaulttemp).toEqual(21)
+    })
+    })
