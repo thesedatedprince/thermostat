@@ -2,6 +2,18 @@ $( document ).ready(function() {
 
 var thermostat = new Thermostat();
 
+$.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=d07e6621e8123dcc8749c05c7cb4e1', function(data) {
+  $('#outsideTemperature').text(data.main.temp);
+});
+
+$('#selectCity').submit(function(event){
+  event.preventDefault();
+  var city = $("#currentCity").val();
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=d07e6621e8123dcc8749c05c7cb4e1', function(data) {
+  $('#outsideTemperature').text(data.main.temp);
+});
+})
+
 $('#currentTemperature').text(thermostat.getcurrenttemp());
 
 $('#usage').text(thermostat.usage());
