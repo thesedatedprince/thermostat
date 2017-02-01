@@ -6,16 +6,20 @@ function Thermostat() {
     this.PSM_OFF_MAX_TEMP = 32;
     this.LOW_USAGE_LIMIT = 18;
     this.MEDIUM_USAGE_LIMIT = 25;
-    
+
     this._temperature = this.DEFAULT_TEMPERATURE;
     this._maxtemperature = 25;
     this._mintemperature = 10;
     this._powersaving = true;
 }
 
+Thermostat.prototype.getcurrenttemp = function(){
+  return this._temperature;
+}
+
 Thermostat.prototype.up = function(number) {
     var temp = this._temperature;
-    
+
     if ((temp += number) > this._maxtemperature) {
         throw new Error("Maximum temperature exceeded");
     }

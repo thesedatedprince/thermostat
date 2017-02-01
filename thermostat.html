@@ -1,0 +1,54 @@
+<!-- Visual:
+Current temp
+usage
+Power mode
+
+Interaction:
+Up temp
+Down temp
+powerswitch
+reset -->
+<!DOCTYPE html>
+<script src="src/Thermostat.js"></script>
+<head>
+  <title>Thermostat</title>
+</head>
+<body>
+  <section>
+    <div>
+      Current temp
+    </div>
+
+    <div>
+      Usage
+    </div>
+
+    <div>
+      Power mode
+    </div>
+  </section>
+  <section>
+    <form>
+      <label for="up">Temp Up
+        <input type="number" min="1" name="up"><br>
+      </label>
+      <input type="submit" value="Temp Up">
+    </form>
+
+    <form>
+      <label for="up">Temp Down
+        <input type="number" min="1" name="down"><br>
+      </label>
+      <input type="submit" value="Temp Down">
+    </form>
+
+    <form>
+      <input type="submit" value="Power Mode">
+    </form>
+
+    <form>
+      <input type="submit" value="Reset">
+    </form>
+  </section>
+
+</html>
