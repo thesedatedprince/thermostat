@@ -11,56 +11,58 @@ reset -->
 <!DOCTYPE html>
 <script src="src/Thermostat.js"></script>
 <script src="jquery.js"></script>
+<script src="interface.js"></script>
+<link rel="stylesheet" href="./public/interface.css" type="text/css" />
 <head>
   <title>Thermostat</title>
 </head>
 <body>
-  <script>
-    
+  <!-- <script>
+
     $( document ).ready(function() {
-    
+
     var thermostat = new Thermostat();
-    
+
     $('#currentTemperature').text(thermostat.getcurrenttemp());
-    
+
     $('#usage').text(thermostat.usage());
-    
+
     $('#powerMode').text(thermostat.getPowerMode());
-    
+
     $( "#upform" ).on ("submit", function( event ) {
       event.preventDefault();
 
       var number = $("#upform :input")['0'].valueAsNumber;
 
       thermostat.up(number);
-      
+
       $('#currentTemperature').text(thermostat.getcurrenttemp());
     });
-    
+
     $( "#downform" ).on ("submit", function( event ) {
       event.preventDefault();
 
       var number = $("#downform :input")['0'].valueAsNumber;
 
       thermostat.down(number);
-      
+
       $('#currentTemperature').text(thermostat.getcurrenttemp());
     });
-    
+
     $('#powerModeButton').click ( function() {
       thermostat.powerswitch();
-      
+
       $('#powerMode').text(thermostat.getPowerMode());
     });
-    
+
     $('#resetButton').click ( function() {
       thermostat.reset();
-      
+
       $('#currentTemperature').text(thermostat.getcurrenttemp());
     });
   });
-    
-  </script>
+
+  </script> -->
   <section>
     <h3 id='currentTemperature'></h3>
     <h3 id='usage'></h3>
