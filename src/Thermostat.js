@@ -15,7 +15,7 @@ function Thermostat() {
 
 Thermostat.prototype.getcurrenttemp = function(){
   return this._temperature;
-}
+};
 
 Thermostat.prototype.up = function(number) {
     var temp = this._temperature;
@@ -62,3 +62,13 @@ Thermostat.prototype.usage = function(){
     return "high-usage";
   }
 };
+ 
+Thermostat.prototype.getPowerMode = function() {
+ if(this._powersaving === true) {
+     return "Power saving is on";
+ }
+ else {
+     return "Power saving is off";
+ }
+};
+

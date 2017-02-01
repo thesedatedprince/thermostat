@@ -10,23 +10,32 @@ powerswitch
 reset -->
 <!DOCTYPE html>
 <script src="src/Thermostat.js"></script>
+<script src="jquery.js"></script>
 <head>
   <title>Thermostat</title>
 </head>
 <body>
+  <script>
+    
+    $( document ).ready(function() {
+    
+    var thermostat = new Thermostat();
+    
+    $('#currentTemperature').text(thermostat.getcurrenttemp());
+    
+    $('#usage').text(thermostat.usage());
+    
+    $('#powerMode').text(thermostat.getPowerMode());
+ 
+  });
+    
+  </script>
   <section>
-    <div>
-      Current temp
-    </div>
-
-    <div>
-      Usage
-    </div>
-
-    <div>
-      Power mode
-    </div>
+    <h3 id='currentTemperature'></h3>
+    <h3 id='usage'></h3>
+    <h3 id='powerMode'></h3>
   </section>
+  <br>
   <section>
     <form>
       <label for="up">Temp Up
@@ -34,18 +43,18 @@ reset -->
       </label>
       <input type="submit" value="Temp Up">
     </form>
-
+    <br>
     <form>
       <label for="up">Temp Down
         <input type="number" min="1" name="down"><br>
       </label>
       <input type="submit" value="Temp Down">
     </form>
-
+    <br>
     <form>
       <input type="submit" value="Power Mode">
     </form>
-
+    <br>
     <form>
       <input type="submit" value="Reset">
     </form>
