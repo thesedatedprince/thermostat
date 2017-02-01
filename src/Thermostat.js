@@ -1,19 +1,33 @@
 'use strict';
 
 function Thermostat() {
-    this._temperature = 20;
+    this.DEFAULT_TEMPERATURE = 20;
+    this.PSM_ON_MAX_TEMP = 25;
+    this.PSM_OFF_MAX_TEMP = 32;
+    this.LOW_USAGE_LIMIT = 18;
+    this.MEDIUM_USAGE_LIMIT = 25;
+    
+    this._temperature = this.DEFAULT_TEMPERATURE;
     this._maxtemperature = 25;
-    this._powersaving = true
+    this._mintemperature = 10;
+    this._powersaving = true;
 }
 
 Thermostat.prototype.up = function(number) {
+    var temp = this._temperature;
+    
+    if ((temp += number) > this._maxtemperature) {
+        throw new Error("Maximum temperature exceeded");
+    }
+    else {
     this._temperature += number;
+    }
 };
 
 Thermostat.prototype.down = function(number) {
     var temp = this._temperature;
 
-    if ((temp -= number) < 10) {
+    if ((temp -= number) < this._mintemperature) {
         throw new Error("Minimum temperature is 10");
     }
     else {
@@ -24,23 +38,23 @@ Thermostat.prototype.down = function(number) {
 Thermostat.prototype.powerswitch = function(){
   if (this._powersaving === true) {
     this._powersaving = false;
-    this._maxtemperature = 32;
+    this._maxtemperature = this.PSM_OFF_MAX_TEMP;
   } else {
     this._powersaving = true;
-    this._maxtemperature = 25;
+    this._maxtemperature = this.PSM_ON_MAX_TEMP;
   }
-}
+};
 
 Thermostat.prototype.reset = function(){
-  this._temperature = 20
-}
+  this._temperature = this.DEFAULT_TEMPERATURE;
+};
 
 Thermostat.prototype.usage = function(){
-  if (this._temperature <= 18){
-    return "low-usage"
-  } else if ((this._temperature > 18) && (this._temperature <= 25)) {
-    return "medium-usage"
-  } else if (this._temperature > 25){
-    return "high-usage"
+  if (this._temperature <= this.LOW_USAGE_LIMIT){
+    return "low-usage";
+  } else if ((this._temperature > this.LOW_USAGE_LIMIT) && (this._temperature <= this.MEDIUM_USAGE_LIMIT)) {
+    return "medium-usage";
+  } else if (this._temperature > this.MEDIUM_USAGE_LIMIT){
+    return "high-usage";
   }
-}
+};
