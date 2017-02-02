@@ -1,0 +1,25 @@
+body{
+  background: green
+}
+
+.leftbutton{
+  float: left;
+  width: 250px;
+}
+
+.rightbutton{
+  float: right;
+  width: 645px
+}
+
+.low-usage {
+  color: green;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: red;
+}

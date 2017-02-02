@@ -9,60 +9,16 @@ Down temp
 powerswitch
 reset -->
 <!DOCTYPE html>
-<script src="src/Thermostat.js"></script>
-<script src="jquery.js"></script>
-<script src="interface.js"></script>
-<link rel="stylesheet" href="./public/interface.css" type="text/css" />
+
 <head>
   <title>Thermostat</title>
+  <script src="src/Thermostat.js"></script>
+  <script src="jquery.js"></script>
+  <script src="interface.js"></script>
+  <link rel="stylesheet" href="./public/main.css" type="text/css" />
 </head>
 <body>
-  <!-- <script>
 
-    $( document ).ready(function() {
-
-    var thermostat = new Thermostat();
-
-    $('#currentTemperature').text(thermostat.getcurrenttemp());
-
-    $('#usage').text(thermostat.usage());
-
-    $('#powerMode').text(thermostat.getPowerMode());
-
-    $( "#upform" ).on ("submit", function( event ) {
-      event.preventDefault();
-
-      var number = $("#upform :input")['0'].valueAsNumber;
-
-      thermostat.up(number);
-
-      $('#currentTemperature').text(thermostat.getcurrenttemp());
-    });
-
-    $( "#downform" ).on ("submit", function( event ) {
-      event.preventDefault();
-
-      var number = $("#downform :input")['0'].valueAsNumber;
-
-      thermostat.down(number);
-
-      $('#currentTemperature').text(thermostat.getcurrenttemp());
-    });
-
-    $('#powerModeButton').click ( function() {
-      thermostat.powerswitch();
-
-      $('#powerMode').text(thermostat.getPowerMode());
-    });
-
-    $('#resetButton').click ( function() {
-      thermostat.reset();
-
-      $('#currentTemperature').text(thermostat.getcurrenttemp());
-    });
-  });
-
-  </script> -->
   <section>
     <h3> Outside temperature: <span id="outsideTemperature"></span></h3>
     <h3 id='currentTemperature'></h3>
@@ -78,29 +34,40 @@ reset -->
   </section>
   <br>
   <section>
-    <form id="upform">
-      <label for="up">Temp Up
-        <input type="number" min="1" name="up"><br>
-      </label>
-      <input type="submit" value="Temp Up">
-    </form>
-    <br>
-    <form id="downform">
-      <label for="down">Temp Down
-        <input type="number" min="1" name="down"><br>
-      </label>
-      <input type="submit" value="Temp Down">
-    </form>
-    <br>
-    <!--<form id="powerMode">-->
-    <!--  <input type="submit" value="Power Mode">-->
-    <!--</form>-->
-    <button id="powerModeButton">Power Mode</button>
-    <br>
-    <!--<form>-->
-    <!--  <input type="submit" value="Reset">-->
-    <!--</form>-->
-    <button id="resetButton">Reset</button>
+    <div class ="buttons">
+
+      <form id="upform" class="leftbutton">
+        <label for="up">Temp Up
+          <input type="number" min="1" name="up"><br>
+        </label>
+        <div>
+          <input  type="submit" value="Temp Up">
+        </div>
+      </form>
+
+      <form id="downform" class="rightbutton">
+        <label for="down">Temp Down
+          <input type="number" min="1" name="down"><br>
+        </label>
+        <div>
+          <input type="submit" value="Temp Down">
+        </div>
+      </form>
+    </div>
   </section>
+
+  <section>
+    <div class="powerbutton">
+      <button id="powerModeButton">Power Mode</button>
+    </div>
+
+
+    <div class="reset">
+      <button id="resetButton">Reset</button>
+    </div>
+
+  </section>
+
+
 
 </html>
