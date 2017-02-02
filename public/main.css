@@ -1,5 +1,6 @@
 body{
-  background: green;
+  background: #1B2A5E;
+  background: -webkit-radial-gradient(#F9FAFA 0%,#319AD4 40% ,#1B2A5E 100%)
 }
 
 .currenttemp{
