@@ -1,15 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('<link href="https://fonts.googleapis.com/css?family=Libre+Franklin');
 body{
-  background: #1B2A5E;
-  background: -webkit-radial-gradient(#F9FAFA 0%,#319AD4 40% ,#1B2A5E 100%)
+  background: black;
+}
+p{
+  font-family: 'Orbitron';
 }
 
+.topcontainer{
+  background-color: black;
+}
+
+.maincontainer{
+  background: #1B2A5E;
+  background: -webkit-linear-gradient(#000000 1%,#F9FAFA 5%, #F9FAFA 97%, #000000 99%);
+
+}
+
+.footcontainer{
+  color: white;
+  font-family: 'Orbitron';
+  font-size: 20px;
+}
+
+
+.button {
+  background-color: #F7A147;
+  background: -webkit-linear-gradient(top, #F9FCFC 0%, #000000 10%);
+  margin: auto;
+  width: 90px;
+  height: 90px;
+  padding: 24px 16px;
+  border-radius: 12px;
+  border: 2px solid #555555;
+  font-family: 'Orbitron';
+  font-size: 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.19);
+}
+
+
 .currenttemp{
-  display: inline-block;
- width: 100%;
+  display: block;
+  margin: auto;
+ width: 100px;
+ min-width: 100px;
  height: 50px;
- margin: auto;
  vertical-align: top;
  text-align: center;
+ font-family: 'Orbitron';
+ font-size: 50px;
+ color: white;
+ background: black;
 }
 
 .outtemp{
@@ -19,6 +62,7 @@ body{
  margin: auto;
  vertical-align: top;
  text-align: center;
+
 }
 
 .selcity{
@@ -38,15 +82,27 @@ body{
  margin: 1em;
  vertical-align: top;
  text-align: center;
+ font-family: 'Orbitron';
 }
 
 .extrainfo{
   display: inline-block;
  width: 45%;
- height: 50px;
+ height: 100px;
  margin: 1em;
  vertical-align: top;
  text-align: center;
+ padding-bottom: : 20px;
+}
+
+.footerinfo{
+  display: inline-block;
+ width: 45%;
+ height: 100px;
+ margin: 1em;
+ vertical-align: top;
+ text-align: center;
+ padding-bottom: 20px;
 }
 
 .low-usage {
@@ -54,7 +110,7 @@ body{
 }
 
 .medium-usage {
-  color: black;
+  color: white;
 }
 
 .high-usage {

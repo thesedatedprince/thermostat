@@ -62,7 +62,7 @@ Thermostat.prototype.usage = function(){
     return "high-usage";
   }
 };
- 
+
 Thermostat.prototype.getPowerMode = function() {
  if(this._powersaving === true) {
      return "Power saving is on";
@@ -71,4 +71,3 @@ Thermostat.prototype.getPowerMode = function() {
      return "Power saving is off";
  }
 };
-

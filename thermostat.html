@@ -15,76 +15,87 @@ reset -->
   <script src="src/Thermostat.js"></script>
   <script src="jquery.js"></script>
   <script src="interface.js"></script>
+  <!-- <link href='//fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'> -->
   <link rel="stylesheet" href="./public/main.css" type="text/css" />
 </head>
 <body>
-
-  <section>
-    <div class="currenttemp">
-      <h3 id='currentTemperature'></h3>
-    </div>
-  </section>
-  <br>
-
-  <br>
+<div class="topcontainer">
   <section>
 
-      <form id="upform" class="forms">
-        <label for="up">Temp Up<br />
-          <input type="number" min="1" name="up">
-        </label>
-        <div>
-          <input  type="submit" value="Temp Up">
+      <div class="currenttemp">
+        <h3 id='currentTemperature'></h3>
+      </div>
+
+
+</section>
+</div>
+
+  <div class="maincontainer">
+    <section>
+
+        <form id="upform" class="forms">
+          <label for="up">Temp Up<br />
+            <input type="number" placeholder="1" min="1" name="up">
+          </label>
+          <div>
+            <input  type="submit" class="button" value="Up">
+          </div>
+        </form>
+
+        <form id="downform" class="forms">
+          <label for="down">Temp Down<br />
+            <input type="number" min="1" name="down">
+          </label>
+          <div>
+            <input type="submit" class="button" value="Down">
+          </div>
+        </form>
+    </section>
+
+    <section>
+      <div class="outtemp">
+          <p> Outside temperature: <span id="outsideTemperature"></span></p>
+      </div>
+      <div class="selcity">
+        <form id="selectCity">
+          <input id="currentCity" type="text" placeholder="Enter a city"></input>
+          <div>
+            <input type="submit" class="button" value="Submit"></input>
+          </div>
+        </form>
+
+    </section>
+
+    <section>
+      <div class="extrainfo">
+          <button id="powerModeButton" class="button">Power Mode</button>
+      </div>
+
+
+      <div class="extrainfo">
+        <button id="resetButton" class="button">Reset</button>
+      </div>
+
+    </section>
+
+  </div>
+  <div class ="footcontainer">
+
+
+
+    <footer>
+      <section>
+        <div class="footerinfo">
+            <p id='powerMode'></span>
         </div>
-      </form>
-
-      <form id="downform" class="forms">
-        <label for="down">Temp Down<br />
-          <input type="number" min="1" name="down">
-        </label>
-        <div>
-          <input type="submit" value="Temp Down">
+        <div class="footerinfo">
+            <p id='usage'></span>
         </div>
-      </form>
-  </section>
+      </section>
+    </footer>
 
-  <section>
-    <div class="outtemp">
-        <p> Outside temperature: <span id="outsideTemperature"></span></p>
-    </div>
-    <div class="selcity">
-      <form id="selectCity">
-        <input id="currentCity" type="text" placeholder="Enter a city"></input>
-        <div>
-          <input type="submit"></input>
-        </div>
-      </form>
+</div>
 
-  </section>
-
-
-
-  <section>
-    <div class="extrainfo">
-        <p id='powerMode'></span>
-    </div>
-    <div class="extrainfo">
-        <p id='usage'></span>
-    </div>
-  </section>
-
-
-  <section>
-    <div class="extrainfo">
-      <button id="powerModeButton">Power Mode</button>
-    </div>
-
-
-    <div class="extrainfo">
-      <button id="resetButton">Reset</button>
-    </div>
-
-  </section>
 
 
 
