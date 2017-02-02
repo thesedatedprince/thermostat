@@ -6,6 +6,12 @@ body{
 p{
   font-family: 'Orbitron';
 }
+input[type=text], [type=number]{
+  border: none;
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+  padding-left: 4px;
+}
 
 .topcontainer{
   background-color: black;
