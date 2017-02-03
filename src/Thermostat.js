@@ -67,3 +67,5 @@ Thermostat.prototype.getPowerMode = function() {
      return "Power saving is off";
  }
 };
+
+

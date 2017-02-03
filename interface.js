@@ -56,6 +56,7 @@ function updateTemperature(){
   $('#usage').text(thermostat.usage());
 }
 
+
 function displayWeather(city) {
  var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
  var token = '&APPID=d07e6621e8123dcc8749c05c7cb4e1db';
