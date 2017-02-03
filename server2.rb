@@ -16,7 +16,7 @@ class ThermoApp < Sinatra::Base
 
   post '/temperature' do
     headers 'Access-Control-Allow-Origin' => '*'
-    $current_temperature = params[:temperature]
+    $current_temperature = params[:temperature].to_i
     $city = params[:city]
   end
 

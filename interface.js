@@ -72,6 +72,8 @@ function postServer(){
 function getServer(){
   $.get("http://localhost:4567/temperature", function(data){
     thermostat._temperature = data.temperature;
+    $('#currentCity').val(data.city);
+    displayWeather(data.city);
     updateTemperature();
   })
 }
