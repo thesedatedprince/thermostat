@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
+
 body{
   background: black;
 }
@@ -13,9 +14,19 @@ p{
   padding-left: 4px;
 }
 
+h1{
+  font-size: 80%;
+  margin: 2%;
+}
 .topcontainer{
   background-color: black;
 }
+
+section{
+  margin: 1%;
+  padding: 1%;
+}
+
 
 .maincontainer{
   background: #1B2A5E;
@@ -29,6 +40,7 @@ p{
   font-family: 'Orbitron';
   font-size: 20px;
 }
+
 #bctext {
    position: absolute;
    width: 100%;
@@ -83,18 +95,8 @@ p{
  margin: auto;
  vertical-align: top;
  text-align: center;
-
-}
-
-.selcity{
-  display: inline-block;
-  position: relative;
- width: 100%;
- height: 50px;
- margin: auto;
- vertical-align: top;
- text-align: center;
- z-index: 3;
+ padding: 1%;
+ float:left;
 }
 
 
@@ -107,7 +109,7 @@ p{
  vertical-align: top;
  text-align: center;
  font-family: 'Orbitron';
- z-index: 3;
+ z-index: ;
 }
 
 .extrainfo{
