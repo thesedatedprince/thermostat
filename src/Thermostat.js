@@ -18,13 +18,20 @@ Thermostat.prototype.getcurrenttemp = function(){
 };
 
 Thermostat.prototype.up = function(number) {
-    var temp = this._temperature;
 
-    if ((temp += number) > this._maxtemperature) {
-        throw new Error("Maximum temperature exceeded");
-    }
-    else {
-    this._temperature += number;
+
+    console.log(number);
+
+    if ((this._temperature + number) <= this._maxtemperature) {
+    //     console.log()
+    //     console.log("num in if", number)
+    //     console.log("this temp in if",this._temperature);
+    //     console.log("max", this._maxtemperature);
+    //     throw new Error("Maximum temperature exceeded");
+    // }
+    // else{
+    this._temperature = this._temperature + number;
+    console.log("after else", this._temperature);
     }
 };
 
